@@ -30,10 +30,47 @@
   gap: 6px;
 }
 
+.logoTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.appLogo {
+  width: 40px;
+  height: 40px;
+}
+
 .title {
   margin: 0;
   font-size: 28px;
   letter-spacing: -0.02em;
+}
+
+.infoPanel {
+  padding: 18px;
+  border-top: 1px solid rgba(148, 163, 184, 0.28);
+}
+
+.infoTitle {
+  font-weight: 650;
+  font-size: 14px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.infoContent {
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.infoContent p {
+  margin: 0 0 12px 0;
+}
+
+.infoContent p:last-child {
+  margin-bottom: 0;
 }
 
 .subtitle {
@@ -217,7 +254,7 @@
     linear-gradient(45deg, transparent 75%, rgba(148, 163, 184, 0.06) 75%),
     linear-gradient(-45deg, transparent 75%, rgba(148, 163, 184, 0.06) 75%);
   background-size: 14px 14px;
-  background-position: 0 0, 0 7px, 7px -7px, -7px 0px;
+  background-position: 0 0, 0 7px, 7px -7px, -7px 0;
 }
 
 .iconName {

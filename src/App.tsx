@@ -1,6 +1,7 @@
 import * as React from 'react'
 import './App.css'
 import * as Icons from 'ghicons'
+import {AbusuaPa} from "ghicons";
 
 type IconComponent = React.ComponentType<{
   size?: number | string
@@ -61,7 +62,10 @@ function App() {
     <div className={`demoRoot ${bg === 'dark' ? 'isDark' : 'isLight'}`}>
       <header className="demoHeader">
         <div className="titleBlock">
-          <h1 className="title">ghicons</h1>
+          <div className="logoTitle">
+            <AbusuaPa size={40} color={bg == 'dark'?'#fff':'#000'} />
+            <h1 className="title">ghicons</h1>
+          </div>
           <p className="subtitle">Pick an icon, tweak props, and copy the exact JSX you’re previewing.</p>
         </div>
 
@@ -186,6 +190,26 @@ function App() {
 
             <div className="previewFooter">
               <div className="previewHelp mono">Tip: paste this directly into your app: {usageCode}</div>
+            </div>
+
+            <div className="infoPanel">
+              <div className="infoTitle">Icon Description</div>
+              <div className="infoContent">
+                {selectedName ? (
+                  <>
+                    <p>
+                      <strong>{selectedName}</strong> is a traditional Ghanaian symbol from the ghicons
+                      library.
+                    </p>
+                    <p>
+                      These icons are designed to be easily integrated into React applications,
+                      supporting custom sizes, colors, and styling.
+                    </p>
+                  </>
+                ) : (
+                  <p>Select an icon to see its details.</p>
+                )}
+              </div>
             </div>
           </aside>
         </div>
